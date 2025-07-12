@@ -1,0 +1,84 @@
+/* Navbar base */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.85); /* Colore scuro semitrasparente */
+  backdrop-filter: blur(10px);        /* Effetto sfocatura dietro */
+  padding: 1.5rem 2rem;
+  z-index: 1000;                      /* Porta davanti ad altri elementi */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* linea sottile */
+}
+
+/* Container centra e limita larghezza */
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Menu orizzontale */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem; /* spazio ampio tra i link */
+  padding: 0;
+  margin: 0;
+}
+
+/* Link base */
+.nav-link {
+  color: #f1f5f9;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Linea animata sotto i link */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #7da7ff; /* blu chiaro */
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Al passaggio del mouse la linea cresce */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Colore link hover */
+.nav-link:hover {
+  color: #7da7ff;
+}
+
+/* Link attivo */
+.nav-link.active {
+  color: #7da7ff;
+}
+
+/* Link attivo linea piena */
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Responsive per schermi piccoli */
+@media (max-width: 600px) {
+  .navbar-menu {
+    gap: 2.5rem;
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,108 @@
+body {
+  background-color: #101022; /* un blu scuro simile a quello che usi */
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #121220;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  font-family: 'Helvetica Neue', sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.contact-title {
+  text-align: center;
+  color: #f4a261;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-input,
+.contact-textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #f4a261;
+  background-color: #121235;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input-focus {
+  border-color: #e76f51;
+  box-shadow: 0 0 8px 2px rgba(231, 111, 81, 0.6);
+  background-color: #121235; /* Non cambia */
+}
+
+.contact-button {
+  background-color: #f4a261;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button.button-hover {
+  background-color: #e76f51;
+  transform: scale(1.05);
+}
+
+
+.contact-back-button {
+  margin-top: 10px;
+  background-color: transparent;
+  color: #f4a261;
+  border: 2px solid #f4a261;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-back-button:hover {
+  background-color: #f4a261;
+  color: white;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #222 inset !important; /* Colore sfondo uguale al tuo input */
+  -webkit-text-fill-color: #fff !important; /* Colore testo */
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* Compatibilità Firefox (opzionale) */
+input:-moz-autofill,
+textarea:-moz-autofill {
+  box-shadow: 0 0 0 1000px #222 inset;
+  color: #fff;
+}
+

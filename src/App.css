@@ -1,0 +1,162 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', sans-serif;
+
+  /* Centro contenuto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5); /* leggermente più scuro per migliorare contrasto */
+  text-align: center;
+  padding: 40px;
+  border-radius: 12px;
+  color: white;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px); /* effetto vetro soft */
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #f4a261;
+  box-shadow: 0 0 15px rgba(244, 162, 97, 0.7);
+}
+
+/* Testo */
+.lastname {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.firstname {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 300;
+  color: #e0e0e0;
+  margin: 20px 0 35px;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: oblique;
+  transform: skew(-5deg);
+}
+
+/* Bottone */
+.contact-btn {
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e76f51;
+}
+
+/* Icone social */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.contact-btn {
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e76f51;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a {
+  display: inline-flex;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #00bcd4; /* azzurro acceso, puoi cambiarlo */
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #f4a261;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #f4a261;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Compatibilità Firefox (opzionale) */
+input:-moz-autofill,
+textarea:-moz-autofill {
+  box-shadow: 0 0 0 1000px #222 inset;
+  color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #222 inset !important; /* Colore sfondo uguale al tuo input */
+  -webkit-text-fill-color: #fff !important; /* Colore testo */
+  transition: background-color 5000s ease-in-out 0s !important;
+}
